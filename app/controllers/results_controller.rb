@@ -12,8 +12,11 @@ class ResultsController < ApplicationController
 	end
 
 	def get_result
-   @student = Student.find_seat_no(params["seat_no"]).first
-	 @subjects = @student.subjects
-	 logger.info "#{@subjects.inspect}KKKKKK"
+		@student = Student.find_seat_no(params["seat_no"]).first
+		if params["seat_no"].present? && @student.present?		
+			@subjects = @student.subjects
+		else
+			redirect_to result_results_path
+		end
 	end
 end
