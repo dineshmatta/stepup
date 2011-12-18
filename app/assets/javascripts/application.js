@@ -65,5 +65,5 @@ function FrontPage_Form1_Validator(theForm)
 
 function admission_message(){
 	$("#adv_message").show();
-	$("#adv_message").hide(5000);
+	$("#adv_message").fadeOut(3000);
 }
