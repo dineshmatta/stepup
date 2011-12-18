@@ -1,0 +1,24 @@
+%table{:align => "center", :border => "0", :width => "634"}
+  %tbody
+    %tr
+      %td{:colspan => "2", :height => "168"}
+        %table{:align => "center", :cellpadding => "3", :cellspacing => "3", :height => "128", :width => "523"}
+          %tbody
+            %tr
+              %td.style3{:bgcolor => "#0099FF", :width => "255"}
+                %span.usertext4 Enter the Seat Number to get Your Result
+            %tr
+              %td{:height => "108", :width => "255"}
+                %table{:align => "center", :cellspacing => "0", :width => "292"}
+                  %tbody
+                    %tr
+                      %td{:width => "370"}
+                        %span.usertext Please Check Your Seat No. before Submitting
+                        = form_tag(get_result_results_path,  {:method => :get, :id => 'result_form', :name => "FrontPage_Form1", :onSubmit => "FrontPage_Form1_Validator('$(this)')"}) do
+                          %center
+                            %span.TAB> Enter Seat Number
+                            \ 
+                            %input{:maxlength => "7", :name => "seat_no", :size => "7", :value => ""}
+                              %br
+                                %br
+                                  = submit_tag 'Submit'

@@ -1,4 +1,24 @@
 StepUp::Application.routes.draw do
+
+  resources :results do
+    collection do
+      get 'result'
+    end
+  end
+
+  resources :results do
+    collection do
+      get 'get_result'
+    end
+  end
+
+
+#  resources :results do
+#    member do
+#      get 'index'
+#    end
+#  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -10,8 +30,9 @@ StepUp::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+#   Sample resource route (maps HTTP verbs to controller actions automatically):
+#     resources :results
+
 
   # Sample resource route with options:
   #   resources :products do
@@ -48,7 +69,7 @@ StepUp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'results#index'
 
   # See how all your routes lay out with "rake routes"
 

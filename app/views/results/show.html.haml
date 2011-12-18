@@ -1,0 +1,38 @@
+%table{:align => "center", :border => "0", :cellpadding => "0", :cellspacing => "0", :width => "700"}
+  %tbody
+    %tr
+      %td{:height => "35", :width => "13%"}
+        %strong
+          %a{:href => "http://results.nic.in/", :target => "_blank"}
+            %img{:align => "left", :border => "0", :height => "30", :src => "../images/icon01.gif", :width => "103"}/
+      %td{:height => "35", :width => "87%"}
+        %p{:align => "right"}
+          %strong
+            Brought to you by
+            %a{:href => "http://nic.gov.in/", :target => "_blank"} Standing Coin Consultancy Services
+
+%table{:align => "center", :bgcolor => "#D2D2D2", :border => "0", :bordercolordark => "#FFFFFF", :bordercolorlight => "#F0D9A2", :cellpadding => "0", :cellspacing => "0", :height => "65", :width => "382"}
+  %tbody
+    %tr
+      %td.usertext3{:height => "21"}
+        Seat Number
+      %td.usertext4=" seat number"
+    %tr
+      %td.usertext3{:height => "21", :width => "108"}
+        Name
+      %td.TAB{:height => "21", :width => "274"}
+        = "Full Name of the student"
+%table{:border => 1, :bordercolor => "#FDF4D5", :align => "center", :width => "382"}
+  %tr
+    %th Subject Code
+    %th Subject Name
+    %th Marks
+  - if false
+    - @searches.each do |search|
+      %tr
+        %td= h search.query_description
+        %td= h search.email
+        %td= link_to 'Show', search
+        %td= link_to 'Edit', edit_search_path(search)
+        %td= link_to 'Destroy', search, :confirm => 'Are you sure?', :method => :delete
+%br/

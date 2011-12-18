@@ -8,7 +8,7 @@ gem 'rails', '3.1.1.rc1'
 gem 'mysql2'
 gem 'execjs', '1.2.9'
 gem 'therubyracer', '0.9.8'
-
+gem 'haml', '3.1.3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

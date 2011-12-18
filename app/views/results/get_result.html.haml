@@ -1,0 +1,13 @@
+%h1 Listing searches
+%table
+  %tr
+    %th Query description
+    %th Email
+  - @searches.each do |search|
+    %tr
+      %td= h search.query_description
+      %td= h search.email
+      %td= link_to 'Show', search
+      %td= link_to 'Edit', edit_search_path(search)
+      %td= link_to 'Destroy', search, :confirm => 'Are you sure?', :method => :delete
+%br/
