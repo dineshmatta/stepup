@@ -1,34 +1,22 @@
-%div{:align => "center"}
-  %b Standing Coin Consultancy Services
-  %br
-    %b presents
-    %br
-      %b STEP UP Test Series
-      %br
-        %br
-          %br
-            %b
-              Step Up Test Series Team
-              %br/
-            %i
-              %b Project Manager
-              \- Mr. Nicky Sidhwani : 9960889988
-            %br
-              %i
-                %b Associate Project Manager
-                \- Mr. Ravi Menghani  : 9820448878
-              %br
-                %i
-                  %b Management Trainee
-                  \- Mr. Manish Menghani: 7507990919
-                %br
-                  %i
-                    %b Management Trainee
-                    \- Mr. Vishal Panjabi : 9320455676
-                  %br
-                    %i
-                      %b Management Trainee
-                      \- Mr. Roshan Motwani : 9321209388
-                    %br
-
-= link_to 'Result', result_results_path
+%div{:align => "center", :style=>"margin-left:opx;"}
+  %span
+    %a.bodytext{:href => "Exam.html"}
+      = link_to "Results", result_results_path, :class => "button"
+  %span.bodytext
+    %font{:color => "#000000", :face => "Verdana", :style => "font-size: 8.5pt"}
+      %span{:style => "text-decoration: none"}
+        %img{:border => "0", :height => "14", :src => "http://www.mu.ac.in/new.gif", :width => "37"}/
+  
+  %span
+    &nbsp;
+    &nbsp;
+    %a.bodytext{:href => "Exam.html"}
+      = link_to_function "Admission Online", "admission_message()", :class => "button"
+  %span.bodytext
+    %font{:color => "#000000", :face => "Verdana", :style => "font-size: 8.5pt"}
+      %span{:style => "text-decoration: none"}
+        %img{:border => "0", :height => "14", :src => "http://www.mu.ac.in/new.gif", :width => "37"}/
+%br
+%div{:align => "center", :style=>"margin-right:40px;"}
+  %span{:style => "display:none", :id => "adv_message"}
+    = "Better Way To Join, Coming Soon."

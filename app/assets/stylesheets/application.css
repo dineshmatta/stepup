@@ -5,3 +5,16 @@
  *= require_self
  *= require_tree . 
 */
+
+.button {
+    background: -moz-linear-gradient(center top , #65A9D7, #3E779D) repeat scroll 0 0 transparent;
+    border-radius: 8px 8px 8px 8px;
+    border-top: 1px solid #96D1F8;
+    box-shadow: 0 1px 0 black;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    vertical-align: middle;
+}

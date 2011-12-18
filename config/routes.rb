@@ -3,14 +3,15 @@ StepUp::Application.routes.draw do
   resources :results do
     collection do
       get 'result'
-    end
-  end
-
-  resources :results do
-    collection do
       get 'get_result'
     end
   end
+
+#  resources :results do
+#    collection do
+#      get 'get_result'
+#    end
+#  end
 
 
 #  resources :results do

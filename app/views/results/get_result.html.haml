@@ -1,13 +1,31 @@
-%h1 Listing searches
-%table
-  %tr
-    %th Query description
-    %th Email
-  - @searches.each do |search|
+%table{:align => "center", :bgcolor => "#D2D2D2", :border => "0", :bordercolordark => "#FFFFFF", :bordercolorlight => "#F0D9A2", :cellpadding => "0", :cellspacing => "0", :height => "65", :width => "500"}
+  %tbody
     %tr
-      %td= h search.query_description
-      %td= h search.email
-      %td= link_to 'Show', search
-      %td= link_to 'Edit', edit_search_path(search)
-      %td= link_to 'Destroy', search, :confirm => 'Are you sure?', :method => :delete
+      %td.usertext3{:height => "21", :width => "200", :style => "color:#0066FF"}
+        %b Seat Number
+      %td.usertext4= @student.seat_no
+    %tr
+      %td.usertext3{:height => "21", :width => "108", :style => "color:#0066FF"}
+        %b Name
+      %td.TAB{:height => "21", :width => "274"}
+        = @student.full_name
+%table{:border => 1, :bordercolor => "#FDF4D5", :align => "center", :width => "500"}
+  %tr
+    %th Subject Code
+    %th Subject Name
+    %th Marks
+    %th Rank
+  - @subjects.each do |subject|
+    %tr
+      %td{:align => "center"}= h subject.code
+      %td{:style => "color:#0066FF; font-weight:bold"}= h subject.name
+      %td{:align => "center"}= h Mark.find_marks(subject.id, @student.id).first.marks
+      %td{:align => "center"}= h Mark.find_marks(subject.id, @student.id).first.rank
 %br/
+
+
+
+%p{:align => "left", :style=>"margin-left:500px;"}
+  = "# XXX: Student Absent for the Exam."
+  %br
+  = "# NA: Subject Not Applicable."

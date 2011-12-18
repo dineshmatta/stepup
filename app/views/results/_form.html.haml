@@ -1,0 +1,8 @@
+= form_tag(get_result_results_path, :method=>'get', :multipart => true) do
+  %p
+    Subject:
+    %br/
+    = text_field_tag "seat_no", '', :maxlength =>"7", :size=>"7"
+  %p
+    = submit_tag 'Submit'
+
